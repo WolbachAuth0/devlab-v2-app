@@ -1,0 +1,12 @@
+node_modules
+/dist
+
+# local env files
+.env.*
+
+# PAT
+pat.txt
+
+# Log files
+npm-debug.log*
+pnpm-debug.log*
