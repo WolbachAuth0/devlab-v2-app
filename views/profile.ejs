@@ -1,0 +1,54 @@
+<%- include('partials/header') -%>
+<%- include('partials/navbar') -%>
+
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-1"></div>
+
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header">User Profile Picture</div>
+    
+        <p class="card-text mx-3">
+          This is the user's profile picture. The url of this image is extracted from the identity token which was provided to the application by the MLS Fan 360 identity provider.<br>
+        </p>
+      <% if (user.picture) { %>
+        <img class="card-img-top" src="<%= user.picture %>">
+      <% } %>
+      </div>
+    </div>
+
+    <div class="col-5">
+      <div class="card">
+        <div class="card-header">MLS Fan 360 Identity</div>
+    
+        <p class="card-text mx-3">
+          This is the content of the MLS Fan 360 identity token that was provided by the Okta Customer Identity Cloud.<br>
+        </p>
+    
+        <div class="card bg-light text-black mx-3">
+          <pre class="overflow-scroll"><code><%= userProfile %></code></pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">User Intelligence</div>
+    
+        <p class="card-text mx-3">
+          This is the data that is held on the user in the mockup of the data lake.<br>
+        </p>
+    
+        <div class="card bg-light text-black mx-3">
+          <pre class="overflow-scroll"><code><%= userIntel %></code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1"></div>
+
+  </div>
+	
+</div>
+<%- include('partials/footer') -%>
