@@ -4,7 +4,8 @@
   "description": "An application to be deployed on Stackblitz.com for use with the Okta CIC devlab v2.",
   "main": "start.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "keywords": ["okta", "auth0", "stackblitz", "okta-cic", "devlab"],
   "author": "aaron.wolbach@okta.com",
